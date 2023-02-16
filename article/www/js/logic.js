@@ -1,13 +1,10 @@
 const realButton = document.getElementById("picture");
 const fakeButton = document.getElementById("open");
 const image = document.getElementById("image");
-
-const realButton2 = document.getElementById("background-image");
-const fakeButton2 = document.getElementById("custom");
 const backgroundImage = document.getElementById("background");
-var count = 0;
 
-Index = 1;
+var count = 0;
+var dex = 1;
 
 document.getElementById('out-btn').addEventListener("click", function() {
     document.getElementById("sources").click();
@@ -54,22 +51,22 @@ realButton.addEventListener("change", function() {
 /**
  * Exports the generated article as a PNG file. The user will be prompted with a save window to select a save file target.
  */
-function printresult() {
+document.getElementById('save').addEventListener('click', function() {
     html2canvas(document.querySelector("#result")).then(canvas => {
         document.body.appendChild(canvas).style.visibility = "hidden";
         Canvas2Image.saveAsPNG(canvas, 600, 600);
     });
-}
+});
 
 document.getElementById('invert').addEventListener('click', function() {
     if (count == 0) {
         image.style.filter = "grayscale(100%)";
-        document.getElementById("invert").style.color = '#2680EB';
+        document.getElementById("inverter").style.filter = "invert(62%) sepia(97%) saturate(5448%) hue-rotate(199deg) brightness(99%) contrast(87%)";
         count = 1;
     }
     else {
         image.style.filter = "none";
-        document.getElementById("invert").style.color = 'grey';
+        document.getElementById("inverter").style.filter = "invert(50%)";
         count = 0;
     }
 });

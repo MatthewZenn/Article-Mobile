@@ -53,7 +53,7 @@
 }
 
 body, html {
-    background-color: rgb(10, 10, 10);
+    background-color: rgb(15, 15, 15);
 }
 
 .open {
@@ -65,10 +65,10 @@ body, html {
     outline: none;
     border-radius: 100%;
     background: none;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     font-family: 'Trebuchet MS';
-    font-size: 24pt;
+    font-size: 30pt;
     color: #2680EB;
 }
 
@@ -206,8 +206,8 @@ body, html {
 }
 
 .window {
-    height: 3in;
-    width: 3in;
+    height: 3.5in;
+    width: 3.5in;
     position: fixed;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -265,8 +265,8 @@ body, html {
 
 .toolbox {
     height: 75px;
-    background-color: rgb(10, 10, 10);
-    border-top: 1px solid rgb(32, 32, 32);
+    background-color: rgb(15, 15, 15);
+    border-top: 2px solid rgb(0, 0, 0);
     position: absolute;
     left: 0;
     bottom: 0;
@@ -275,4 +275,9 @@ body, html {
 
 .re-icon {
     width: 100%;
+}
+
+.icons {
+    width: 90%;
+    filter: invert(50%);
 }

@@ -61,10 +61,10 @@ function printresult() {
     });
 }
 
-function invert() {
+document.getElementById('invert').addEventListener('click', function() {
     if (count == 0) {
         image.style.filter = "grayscale(100%)";
-        document.getElementById("invert").style.color = 'rgb(177, 103, 255)';
+        document.getElementById("invert").style.color = '#2680EB';
         count = 1;
     }
     else {
@@ -72,9 +72,9 @@ function invert() {
         document.getElementById("invert").style.color = 'grey';
         count = 0;
     }
-}
+});
 
-function copyText() {
+document.getElementById('copy').addEventListener('click', function() {
     document.getElementById("title").select();
     document.execCommand('copy',false);
-}
+});

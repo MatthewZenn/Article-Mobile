@@ -61,15 +61,15 @@ body, html {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    border: 2px solid rgb(206, 131, 253);
+    border: 2px solid #2680EB;
     outline: none;
-    border-radius: 25%;
+    border-radius: 100%;
     background: none;
     width: 50px;
     height: 50px;
     font-family: 'Trebuchet MS';
     font-size: 24pt;
-    color: rgb(206, 131, 253);
+    color: #2680EB;
 }
 
 .title {
@@ -123,9 +123,9 @@ body, html {
 
 .btn {
     position: absolute;
-    right: 15%;
+    right: 5%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(0%, -50%);
     border: none;
     outline: none;
     border-radius: 5px;
@@ -218,9 +218,9 @@ body, html {
 
 .invert {
     position: absolute;
-    right: 5%;
+    right: 15%;
     top: 50%;
-    transform: translate(0%, -50%);
+    transform: translate(-50%, -50%);
     border: none;
     outline: none;
     border-radius: 5px;

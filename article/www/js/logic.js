@@ -2,13 +2,21 @@ const realButton = document.getElementById("picture");
 const fakeButton = document.getElementById("open");
 const image = document.getElementById("image");
 const backgroundImage = document.getElementById("background");
+const sources = document.getElementById("sources");
 
 var count = 0;
 var dex = 1;
 
-document.getElementById('out-btn').addEventListener("click", function() {
-    document.getElementById("sources").click();
+document.getElementById("out").addEventListener("click", function() {
+    sources.showDropdown();
 });
+
+showDropdown = function (element) {
+    var event;
+    event = document.createEvent('MouseEvents');
+    event.initMouseEvent('mousedown', true, true, window);
+    element.dispatchEvent(event);
+};
 
 document.getElementById('sources').addEventListener('change', () => {
     var index = document.getElementById("sources");
@@ -66,7 +74,7 @@ document.getElementById('invert').addEventListener('click', function() {
     }
     else {
         image.style.filter = "none";
-        document.getElementById("inverter").style.filter = "invert(50%)";
+        document.getElementById("inverter").style.filter = "invert(30%)";
         count = 0;
     }
 });

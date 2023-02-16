@@ -278,6 +278,6 @@ body, html {
 }
 
 .icons {
-    width: 90%;
-    filter: invert(50%);
+    width: 80%;
+    filter: invert(30%);
 }

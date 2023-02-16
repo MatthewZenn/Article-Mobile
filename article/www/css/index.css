@@ -155,7 +155,7 @@ body, html {
 
 .source-btn {
     position: absolute;
-    left: 125px;
+    left: 100px;
     top: 15%;
     border: none;
     outline: none;
@@ -265,8 +265,8 @@ body, html {
 
 .toolbox {
     height: 75px;
-    background-color: rgb(15, 15, 15);
-    border-top: 2px solid rgb(0, 0, 0);
+    background-color: rgb(20, 20, 20);
+    border: none;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -278,6 +278,24 @@ body, html {
 }
 
 .icons {
-    width: 80%;
+    width: 60%;
     filter: invert(30%);
+}
+
+#tray {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(30, 30, 30);
+    z-index: -5;
+    height: 250px;
+}
+
+.outlet {
+    position: relative;
+}
+
+.outlet:hover {
+    cursor: pointer;
 }

@@ -83,3 +83,9 @@ document.getElementById('copy').addEventListener('click', function() {
     document.getElementById("title").select();
     document.execCommand('copy',false);
 });
+
+$('.outlet').on('click', function() {
+    let imgSrc = $(this).attr('id');
+    console.log(imgSrc);
+    document.getElementById("background").src = "covers/" + imgSrc + ".png";
+});

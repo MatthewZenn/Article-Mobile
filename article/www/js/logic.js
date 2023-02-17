@@ -7,21 +7,45 @@ const sources = document.getElementById("sources");
 var count = 0;
 var dex = 1;
 
-document.getElementById("out").addEventListener("click", function() {
-    sources.showDropdown();
+document.getElementById('out').addEventListener("click", function() {
+    if(document.getElementById("tray").style.height == "150px") {
+        document.getElementById("tray").style.height = "0px";
+        document.getElementById("tray").style.display = "hidden";
+    }
+    else {
+        document.getElementById("tray").style.height = "150px";
+        document.getElementById("tray").style.opacity = "block";
+    }
 });
 
-showDropdown = function (element) {
-    var event;
-    event = document.createEvent('MouseEvents');
-    event.initMouseEvent('mousedown', true, true, window);
-    element.dispatchEvent(event);
-};
+document.getElementById('1').addEventListener('click', function() {
+    var index = this.id;
+    document.getElementById("background").setAttribute('src', "covers/" + index + ".png");
+    document.documentElement.setAttribute('data-theme', index);
+});
 
-document.getElementById('sources').addEventListener('change', () => {
-    var index = document.getElementById("sources");
-    backgroundImage.setAttribute('src', "covers/" + index.value + ".png");
-    document.documentElement.setAttribute('data-theme', index.value)
+document.getElementById('2').addEventListener('click', function() {
+    var index = this.id;
+    document.getElementById("background").setAttribute('src', "covers/" + index + ".png");
+    document.documentElement.setAttribute('data-theme', index);
+});
+
+document.getElementById('3').addEventListener('click', function() {
+    var index = this.id;
+    document.getElementById("background").setAttribute('src', "covers/" + index + ".png");
+    document.documentElement.setAttribute('data-theme', index);
+});
+
+document.getElementById('4').addEventListener('click', function() {
+    var index = this.id;
+    document.getElementById("background").setAttribute('src', "covers/" + index + ".png");
+    document.documentElement.setAttribute('data-theme', index);
+});
+
+document.getElementById('5').addEventListener('click', function() {
+    var index = this.id;
+    document.getElementById("background").setAttribute('src', "covers/" + index + ".png");
+    document.documentElement.setAttribute('data-theme', index);
 });
 
 /**
@@ -82,10 +106,4 @@ document.getElementById('invert').addEventListener('click', function() {
 document.getElementById('copy').addEventListener('click', function() {
     document.getElementById("title").select();
     document.execCommand('copy',false);
-});
-
-$('.outlet').on('click', function() {
-    let imgSrc = $(this).attr('id');
-    console.log(imgSrc);
-    document.getElementById("background").src = "covers/" + imgSrc + ".png";
 });

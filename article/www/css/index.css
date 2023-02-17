@@ -288,12 +288,21 @@ body, html {
     left: 0;
     width: 100%;
     background-color: rgb(30, 30, 30);
-    z-index: -5;
-    height: 250px;
+    z-index: -99;
+    height: 0px;
+    transition: 0.5s;
+    overflow-y: hidden;
+    display: hidden;
+    justify-content: center;
+    overflow-x: scroll;
 }
 
 .outlet {
     position: relative;
+    width: 15%;
+    display: inline-block;
+    top: 10px;
+    left: 10px;
 }
 
 .outlet:hover {

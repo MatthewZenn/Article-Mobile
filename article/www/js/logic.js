@@ -11,10 +11,12 @@ document.getElementById('out').addEventListener("click", function() {
     if(document.getElementById("tray").style.height == "150px") {
         document.getElementById("tray").style.height = "0px";
         document.getElementById("tray").style.display = "hidden";
+        document.getElementById("newl").style.filter = "invert(30%)";
     }
     else {
         document.getElementById("tray").style.height = "150px";
-        document.getElementById("tray").style.opacity = "block";
+        document.getElementById("tray").style.display = "block";
+        document.getElementById("newl").style.filter = "brightness(0) saturate(100%) invert(49%) sepia(72%) saturate(3562%) hue-rotate(242deg) brightness(106%) contrast(101%)";
     }
 });
 
@@ -93,7 +95,7 @@ document.getElementById('save').addEventListener('click', function() {
 document.getElementById('invert').addEventListener('click', function() {
     if (count == 0) {
         image.style.filter = "grayscale(100%)";
-        document.getElementById("inverter").style.filter = "invert(62%) sepia(97%) saturate(5448%) hue-rotate(199deg) brightness(99%) contrast(87%)";
+        document.getElementById("inverter").style.filter = "brightness(0) saturate(100%) invert(49%) sepia(72%) saturate(3562%) hue-rotate(242deg) brightness(106%) contrast(101%)";
         count = 1;
     }
     else {

@@ -106,6 +106,5 @@ document.getElementById('invert').addEventListener('click', function() {
 });
 
 document.getElementById('copy').addEventListener('click', function() {
-    document.getElementById("title").select();
-    document.execCommand('copy',false);
+    navigator.clipboard.writeText(document.getElementById("title").innerHTML);
 });
